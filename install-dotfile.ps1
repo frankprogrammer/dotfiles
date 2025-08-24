@@ -1,8 +1,4 @@
-param(
-    [string]$DotfilesDir = "$PSScriptRoot",
-    [switch]$Symlink
-)
-
+$DotfilesDir = "$PSScriptRoot"
 Import-Module powershell-yaml
 
 function Resolve-TargetPath($path) {
@@ -14,7 +10,7 @@ function Resolve-TargetPath($path) {
 
 # Get app name from first argument
 if ($args.Count -lt 1) {
-    Write-Error "Usage: ./install-dotfiles.ps1 <appname> [-Symlink]"
+    Write-Error "Usage: .\install-dotfiles.ps1 <appname>"
     exit 1
 }
 
@@ -61,13 +57,7 @@ Get-ChildItem -Recurse $appDir | Where-Object {
             New-Item -ItemType Directory -Path $target -Force | Out-Null
         }
     } else {
-        if ($Symlink) {
-            if (Test-Path $target) { Remove-Item $target -Force }
-            New-Item -ItemType SymbolicLink -Path $target -Target $_.FullName | Out-Null
-            Write-Host "Symlinked $($_.FullName) → $target"
-        } else {
-            Copy-Item $_.FullName $target -Force
-            Write-Host "Copied $($_.FullName) → $target"
-        }
+		Copy-Item $_.FullName $target -Force
+		Write-Host "Copied $($_.FullName) → $target"
     }
 }
