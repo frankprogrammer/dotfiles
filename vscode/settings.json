@@ -1,0 +1,295 @@
+{
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[lua]": {
+    "editor.defaultFormatter": "JohnnyMorganz.stylua"
+  },
+  "[luau]": {
+    "editor.defaultFormatter": "JohnnyMorganz.stylua"
+  },
+  "[plaintext]": {
+    "editor.quickSuggestions": {
+      "comments": false, // or "off"
+      "other": false, // or "off"
+      "strings": false // or "off"
+    }
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "breadcrumbs.showVariables": false,
+  "C_Cpp.intelliSenseEngine": "disabled",
+  "chat.commandCenter.enabled": false,
+  "cSpell.userWords": ["setmetatable"],
+  "diffEditor.codeLens": true,
+  "diffEditor.wordWrap": "off",
+  "dotnet.codeLens.enableReferencesCodeLens": false,
+  "editor.fontSize": 16,
+  // "editor.fontFamily": "Fira Code Regular",
+  // "editor.fontFamily": "Fira Mono",
+  "editor.formatOnSave": true,
+  "editor.glyphMargin": false,
+  "editor.gotoLocation.multipleDeclarations": "goto",
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  "editor.insertSpaces": false,
+  "editor.lineNumbers": "relative",
+  "editor.minimap.enabled": false,
+  "editor.renderControlCharacters": false,
+  "editor.renderWhitespace": "none",
+  "editor.semanticHighlighting.enabled": true,
+  "explorer.compactFolders": false,
+  "explorer.confirmDragAndDrop": false,
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1 // this is for flash.vscode
+  },
+  "flash-vscode.dimOpacity": "1",
+  "flash-vscode.labelBackgroundColor": "#ccff88",
+  "flash-vscode.labelColor": "#000000",
+  "flash-vscode.labelFontWeight": "regular",
+  "flash-vscode.labelKeys": "haeistrnygfoujwdlbzp,.?cmxqkv4560}{)(123789][%><-",
+  "flash-vscode.matchColor": "#009FFF",
+  "flash-vscode.matchFontWeight": "regular",
+  "geminicodeassist.inlineSuggestions.enableAuto": false,
+  // "extensions.ignoreRecommendations": true,
+  // "geminicodeassist.inlineSuggestions.enableAuto": true,
+  "git.enabled": false, // use https://git-fork.com/
+  "helium-icon-theme.folders.color": "#bc944e",
+  "helium-icon-theme.folders.theme": "classic",
+  "helium-icon-theme.hidesExplorerArrows": true,
+  "luau-lsp.completion.imports.enabled": true,
+  "luau-lsp.completion.imports.requireStyle": "alwaysAbsolute",
+  // "luau-lsp.fflags.enableNewSolver": true,
+  // "luau-lsp.plugin.enabled": true,
+  "outline.collapseItems": "alwaysCollapse",
+  "search.quickOpen.history.filterSortOrder": "recency",
+  "security.workspace.trust.untrustedFiles": "open",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "vim.handleKeys": {
+    "<C-b>": false,
+    "<C-f>": false,
+    "<C-p>": false,
+    "<C-w>": true
+  },
+  "vim.highlightedyank.color": "rgba(255, 184, 108, 1.0)",
+  "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.textColor": "#000000",
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // default vim undo/redo is horrible, so just use VSCode's
+    {
+      "after": [],
+      "before": ["u"],
+      "commands": [
+        {
+          "args": [],
+          "command": "undo"
+        }
+      ]
+    },
+    {
+      "after": [],
+      "before": ["<C-r>"],
+      "commands": [
+        {
+          "args": [],
+          "command": "redo"
+        }
+      ]
+    },
+    {
+      "before": ["s"],
+      "commands": ["flash-vscode.start"]
+    },
+    {
+      "before": ["S"],
+      "commands": ["flash-vscode.startSelection"]
+    },
+    {
+      "before": ["<BS>"],
+      "commands": ["flash-vscode.backspace"]
+    }
+  ],
+  "vim.useSystemClipboard": true,
+  "vim.visualModeKeyBindingsNonRecursive": [
+    // default vim paste clears the clipboard, so just flip the behavior
+    {
+      "after": ["P"],
+      "before": ["p"]
+    },
+    {
+      "after": ["p"],
+      "before": ["P"]
+    }
+  ],
+  "vsicons.associations.files": [
+    {
+      "extensions": ["luau"],
+      "format": "png",
+      "icon": "ModuleScript-dark"
+    },
+    {
+      "extensions": ["client.luau"],
+      "format": "png",
+      "icon": "LocalScript-dark"
+    },
+    {
+      "extensions": ["server.luau"],
+      "format": "png",
+      "icon": "Script-dark"
+    },
+    {
+      "extensions": ["lua"],
+      "format": "png",
+      "icon": "ModuleScript-dark"
+    },
+    {
+      "extensions": ["client.lua"],
+      "format": "png",
+      "icon": "LocalScript-dark"
+    },
+    {
+      "extensions": ["server.lua"],
+      "format": "png",
+      "icon": "Script-dark"
+    }
+  ],
+  "vsicons.associations.folders": [
+    {
+      "extensions": ["server"],
+      "format": "png",
+      "icon": "ServerScriptService-dark"
+    },
+    {
+      "extensions": ["shared"],
+      "format": "png",
+      "icon": "ReplicatedStorage-dark"
+    },
+    {
+      "extensions": ["client"],
+      "format": "png",
+      "icon": "StarterPlayerScripts-dark"
+    },
+    {
+      "extensions": ["Lighting"],
+      "format": "png",
+      "icon": "Lighting-dark"
+    },
+    {
+      "extensions": ["MaterialService"],
+      "format": "png",
+      "icon": "MaterialService-dark"
+    },
+    {
+      "extensions": ["Players"],
+      "format": "png",
+      "icon": "Players-dark"
+    },
+    {
+      "extensions": ["ReplicatedFirst"],
+      "format": "png",
+      "icon": "ReplicatedFirst-dark"
+    },
+    {
+      "extensions": ["ReplicatedStorage"],
+      "format": "png",
+      "icon": "ReplicatedStorage-dark"
+    },
+    {
+      "extensions": ["ServerScriptService"],
+      "format": "png",
+      "icon": "ServerScriptService-dark"
+    },
+    {
+      "extensions": ["ServerStorage"],
+      "format": "png",
+      "icon": "ServerStorage-dark"
+    },
+    {
+      "extensions": ["SoundService"],
+      "format": "png",
+      "icon": "SoundService-dark"
+    },
+    {
+      "extensions": ["StarterCharacterScripts"],
+      "format": "png",
+      "icon": "StarterCharacterScripts-dark"
+    },
+    {
+      "extensions": ["StarterGui"],
+      "format": "png",
+      "icon": "StarterGui-dark"
+    },
+    {
+      "extensions": ["StarterPack"],
+      "format": "png",
+      "icon": "StarterPack-dark"
+    },
+    {
+      "extensions": ["StarterPlayer"],
+      "format": "png",
+      "icon": "StarterPlayer-dark"
+    },
+    {
+      "extensions": ["StarterPlayerScripts"],
+      "format": "png",
+      "icon": "StarterPlayerScripts-dark"
+    },
+    {
+      "extensions": ["Teams"],
+      "format": "png",
+      "icon": "Teams-dark"
+    },
+    {
+      "extensions": ["TestService"],
+      "format": "png",
+      "icon": "TestService-dark"
+    },
+    {
+      "extensions": ["TextChatService"],
+      "format": "png",
+      "icon": "TextChatService-dark"
+    },
+    {
+      "extensions": ["Workspace"],
+      "format": "png",
+      "icon": "Workspace-dark"
+    }
+  ],
+  "vsicons.presets.foldersAllDefaultIcon": true,
+  "vsicons.presets.hideExplorerArrows": true,
+  "window.commandCenter": false,
+  "window.customTitleBarVisibility": "windowed",
+  "window.title": "${rootName}${separator}${profileName}",
+  "window.zoomLevel": 2, // if font is too zoomed in, adjust this value
+  "workbench.activityBar.location": "top",
+  "workbench.colorTheme": "Tokyo Night", // enkia.tokyo-night in Extensions
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.showIcons": false,
+  "workbench.editor.tabSizing": "fit",
+  "workbench.editor.wrapTabs": true,
+  "workbench.iconTheme": "helium-icon-theme",
+  // "workbench.iconTheme": "vscode-icons",
+  "workbench.layoutControl.enabled": false,
+  "workbench.settings.editor": "json",
+  "workbench.sideBar.location": "right",
+  "workbench.tree.indent": 16,
+  "zenMode.centerLayout": false,
+  "zenMode.hideLineNumbers": false,
+  "zenMode.hideStatusBar": false,
+  "askToolkit.showWelcomeScreen": false
+}
