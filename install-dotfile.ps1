@@ -1,4 +1,6 @@
-$DotfilesDir = "$PSScriptRoot"
+if (-not (Get-Module -ListAvailable -Name powershell-yaml)) {
+    Install-Module -Name powershell-yaml -Scope CurrentUser -Force
+}
 Import-Module powershell-yaml
 
 function Resolve-TargetPath($path) {
@@ -16,6 +18,7 @@ if ($args.Count -lt 1) {
 
 $App = $args[0]
 
+$DotfilesDir = "$PSScriptRoot"
 $appDir = Join-Path $DotfilesDir $App
 $configPath = Join-Path $appDir "install.conf.yaml"
 
@@ -58,6 +61,6 @@ Get-ChildItem -Recurse $appDir | Where-Object {
         }
     } else {
 		Copy-Item $_.FullName $target -Force
-		Write-Host "Copied $($_.FullName) → $target"
+		Write-Host "Copied $($_.FullName) to $target"
     }
 }

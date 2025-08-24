@@ -1,8 +1,4 @@
-Run this command once:
-
-```
-Install-Module -Name powershell-yaml
-```
+This script will install the module powershell-yaml if it is not found
 
 This will copy over all of the nvim settings to the
 location inside nvim/install.conf.yaml
